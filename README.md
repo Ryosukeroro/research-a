@@ -42,3 +42,10 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 rosrun map_server map_saver -f ~/map
 ```
+
+
+# 実験
+再びシミュレーションを起動します。
+```
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+```
