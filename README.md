@@ -20,7 +20,7 @@ gmapping起動
 
 地図を保存
 
-#　実験のための準備
+# 実験のための準備
 以下はロボットモデルの選択です。
 ```bash
 export TURTLEBOT3_MODEL=burger
