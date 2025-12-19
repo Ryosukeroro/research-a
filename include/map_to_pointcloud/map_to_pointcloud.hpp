@@ -23,8 +23,9 @@ class MapToPointCloudData
     public:
 
         /**
+        * @brief MapToCloudDataクラスのコントラクタ
          */
-        MapToPointCloudData();
+        MapToPointCloudData(ros::NodeHandle& node);
 
         /**
         */
