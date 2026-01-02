@@ -11,6 +11,7 @@
 #include <sensor_msgs/PointField.h>
 
 #include "utilities.h"
+#include "point2.h"
 
 // 占有率定義
 #define FREESPACE_COST_GRIDMAP 0
@@ -25,7 +26,7 @@ class MapToPointCloudData
         /**
         * @brief MapToCloudDataクラスのコントラクタ
          */
-        MapToPointCloudData(ros::NodeHandle& node);
+        MapToPointCloudData(ros::NodeHandle node);
 
         /**
         */
@@ -62,7 +63,7 @@ class MapToPointCloudData
         ros::Publisher pub_cloud; // 変換後の点群データのパブリッシャ
         ros::Subscriber sub_map; // 変換する地図のサブスクライバ
 
-        double occupied_threth_; // 完全占有として判断する占有確率(0~100%)の閾値
+        double occupied_thresh_; // 完全占有として判断する占有確率(0~100%)の閾値
         std::string global_frame_; // 地図のフレーム名
         unsigned int map_cell_width_; // 地図の幅[cell]
         unsigned int map_cell_height_; // 地図の高さ[cell]

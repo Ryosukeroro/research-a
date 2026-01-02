@@ -103,7 +103,7 @@ void MapToPointCloudData::recvMapCB(const nav_msgs::OccupancyGridPtr msg)
     pub_cloud.publish(cloud_msg);
 
 #ifndef DEBUG
-     ROS_INOFO("!!!!!Pub PointCloud Data!!!!!");
+     ROS_INFO("!!!!!Pub PointCloud Data!!!!!");
 #endif
 
 

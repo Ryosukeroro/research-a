@@ -1,0 +1,24 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="TARGET_MAP_FILE" default="/home/ryosuke/map.yaml"/>
+    <arg name="TARGET_MAP_TOPIC" default="/reference_map"/>
+    <arg name="TARGET_MAP_CLOUD_TOPIC" default="/target_cloud"/>
+    <arg name="USE_MAP_SERVER" default="true" />
+    <arg name="USE_CLOUD_VIEWER" default="true" />
+
+    <!-- Map server -->
+    <group if="$(arg USE_MAP_SERVER)">
+        <node pkg="map_server" name="map_server_target" type="map_server" args="$(arg TARGET_MAP_FILE)" output="screen">
+            <remap from="map" to="$(arg TARGET_MAP_TOPIC)" />
+            <param name="frame_id" value="map" />
+        </node>
+    </group>
+
+    <!-- Map to cloud -->
+    <node pkg="research-a" name="map_to_cloud_target" type="map_to_pointcloud_node" output="screen">
+        <rosparam file="$(find research-a)/param/map_to_pointcloud.yaml" command="load" />
+        <param name="global_frame" value="map" />
+        <param name="map_topic_name" value="/$(arg TARGET_MAP_TOPIC)" />
+        <param name="cloud_topic_name" value="/$(arg TARGET_MAP_CLOUD_TOPIC)" />
+    </node>
+</launch>

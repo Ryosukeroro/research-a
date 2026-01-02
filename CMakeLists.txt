@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(research)
+project(research-a)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -146,93 +146,94 @@ include
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/research_node.cpp)
-add_executable(Lidar_node_client src/L.cpp)
-add_executable(Lidar_node_client2 src/Li.cpp)
-add_executable(Lidar_node_client3 src/LiD.cpp)
-add_executable(Lidar_node_client4 src/LiDA.cpp)
-add_executable(Lidar_node_client5 src/LiDAR.cpp
-    src/differential.cpp 
-    src/icp_matching.cpp 
-    src/distance.cpp
-    src/path_visualizer.cpp
-    src/sgd.cpp
-    )
-add_executable(LiDAR_node_SGD src/LiDAR-S.cpp)
-add_executable(LiDAR_node_SGD1 src/LiDA-SG.cpp)
-add_executable(Lidar_node_client6 src/LiDAR_m.cpp)
-add_executable(Lidar_node_client7 
-    src/LiDAR_ma.cpp 
-    src/differential.cpp 
-    src/icp_matching.cpp 
-    src/distance.cpp
-    src/path_visualizer.cpp
-    src/sgd.cpp
-)
-add_executable(Lidar_node_client8 
-    src/LiDAR_map.cpp 
-    src/differential.cpp 
-    src/icp_matching.cpp 
-    src/distance.cpp
-    src/path_visualizer.cpp
-    src/sgd.cpp
-)
-add_executable(Lidar_node_client9 
-    src/SiDAR_map.cpp 
-    src/differential.cpp 
-    src/icp_matching.cpp 
-    src/gauss_icp_matching.cpp
-    src/distance.cpp
-    src/path_visualizer.cpp
-    src/matrix_math.cpp
-    src/sgd.cpp
-    src/tf_broadcaster.cpp
-)
-add_executable(ground_truth_publisher src/ground_truth_publisher.cpp)
-add_executable(Lidar_node_client10
-    src/NoSiDAR_map.cpp 
-    src/differential.cpp 
-    src/icp_matching.cpp 
-    src/gauss_icp_matchingnormal.cpp
-    src/distance.cpp
-    src/path_visualizer.cpp
-    src/matrix_math.cpp
-    src/sgd.cpp
-    src/tf_broadcaster.cpp
-)
-add_executable(Lidar_node_client11
-    src/norSiDAR_map.cpp 
-    src/differential.cpp 
-    src/icp_matching.cpp 
-    src/gauss_icp_matchingnormal.cpp
-    src/distance.cpp
-    src/path_visualizer.cpp
-    src/matrix_math.cpp
-    src/sgd.cpp
-    src/tf_broadcaster.cpp
-)
-add_executable(Lidar_node_client12
-    src/snorSiDAR_map.cpp 
-    src/differential.cpp 
-    src/icp_matching.cpp 
-    src/gauss_icp_matchingnormal.cpp
-    src/distance.cpp
-    src/path_visualizer.cpp
-    src/matrix_math.cpp
-    src/sgd.cpp
-    src/tf_broadcaster.cpp
-)
-add_executable(Lidar_node_client13
-    src/slnorSiDAR_map.cpp 
-    src/differential.cpp 
-    src/icp_matching.cpp 
-    src/gauss_icp_matchingnormal.cpp
-    src/distance.cpp
-    src/path_visualizer.cpp
-    src/matrix_math.cpp
-    src/sgd.cpp
-    src/tf_broadcaster.cpp
-    src/lmicp.cpp
-)
+add_executable(map_to_pointcloud_node src/map_to_pointcloud_node.cpp
+src/map_to_pointcloud.cpp)
+# add_executable(Lidar_node_client2 src/Li.cpp)
+# add_executable(Lidar_node_client3 src/LiD.cpp)
+# add_executable(Lidar_node_client4 src/LiDA.cpp)
+# add_executable(Lidar_node_client5 src/LiDAR.cpp
+#     src/differential.cpp 
+#     src/icp_matching.cpp 
+#     src/distance.cpp
+#     src/path_visualizer.cpp
+#     src/sgd.cpp
+#     )
+# add_executable(LiDAR_node_SGD src/LiDAR-S.cpp)
+# add_executable(LiDAR_node_SGD1 src/LiDA-SG.cpp)
+# add_executable(Lidar_node_client6 src/LiDAR_m.cpp)
+# add_executable(Lidar_node_client7 
+#     src/LiDAR_ma.cpp 
+#     src/differential.cpp 
+#     src/icp_matching.cpp 
+#     src/distance.cpp
+#     src/path_visualizer.cpp
+#     src/sgd.cpp
+# )
+# add_executable(Lidar_node_client8 
+#     src/LiDAR_map.cpp 
+#     src/differential.cpp 
+#     src/icp_matching.cpp 
+#     src/distance.cpp
+#     src/path_visualizer.cpp
+#     src/sgd.cpp
+# )
+# add_executable(Lidar_node_client9 
+#     src/SiDAR_map.cpp 
+#     src/differential.cpp 
+#     src/icp_matching.cpp 
+#     src/gauss_icp_matching.cpp
+#     src/distance.cpp
+#     src/path_visualizer.cpp
+#     src/matrix_math.cpp
+#     src/sgd.cpp
+#     src/tf_broadcaster.cpp
+# )
+# add_executable(ground_truth_publisher src/ground_truth_publisher.cpp)
+# add_executable(Lidar_node_client10
+#     src/NoSiDAR_map.cpp 
+#     src/differential.cpp 
+#     src/icp_matching.cpp 
+#     src/gauss_icp_matchingnormal.cpp
+#     src/distance.cpp
+#     src/path_visualizer.cpp
+#     src/matrix_math.cpp
+#     src/sgd.cpp
+#     src/tf_broadcaster.cpp
+# )
+# add_executable(Lidar_node_client11
+#     src/norSiDAR_map.cpp 
+#     src/differential.cpp 
+#     src/icp_matching.cpp 
+#     src/gauss_icp_matchingnormal.cpp
+#     src/distance.cpp
+#     src/path_visualizer.cpp
+#     src/matrix_math.cpp
+#     src/sgd.cpp
+#     src/tf_broadcaster.cpp
+# )
+# add_executable(Lidar_node_client12
+#     src/snorSiDAR_map.cpp 
+#     src/differential.cpp 
+#     src/icp_matching.cpp 
+#     src/gauss_icp_matchingnormal.cpp
+#     src/distance.cpp
+#     src/path_visualizer.cpp
+#     src/matrix_math.cpp
+#     src/sgd.cpp
+#     src/tf_broadcaster.cpp
+# )
+# add_executable(Lidar_node_client13
+#     src/slnorSiDAR_map.cpp 
+#     src/differential.cpp 
+#     src/icp_matching.cpp 
+#     src/gauss_icp_matchingnormal.cpp
+#     src/distance.cpp
+#     src/path_visualizer.cpp
+#     src/matrix_math.cpp
+#     src/sgd.cpp
+#     src/tf_broadcaster.cpp
+#     src/lmicp.cpp
+# )
 ##add_executable(Lidar_node_client7 src/LiDAR_ma.cpp src/differential.cpp)
 ##add_executable(LiDAR_node_client7 src/LiDAR_ma.cpp src/icp_matching.cpp)
 ##add_executable(LiDAR_node_client7 src/LiDAR_ma.cpp src/distance.cpp)
@@ -248,54 +249,54 @@ add_executable(Lidar_node_client13
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-target_link_libraries(Lidar_node_client
+target_link_libraries(map_to_pointcloud_node
  ${catkin_LIBRARIES}
 )
-target_link_libraries(Lidar_node_client2
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client3
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client4
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client5
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client7
- ${catkin_LIBRARIES}
-)
-target_link_libraries(LiDAR_node_SGD
- ${catkin_LIBRARIES}
-)
-target_link_libraries(LiDAR_node_SGD1
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client6
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client8
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client9
- ${catkin_LIBRARIES}
-)
-target_link_libraries(ground_truth_publisher
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client10
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client11
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client12
- ${catkin_LIBRARIES}
-)
-target_link_libraries(Lidar_node_client13
- ${catkin_LIBRARIES}
-)
+# target_link_libraries(Lidar_node_client2
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client3
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client4
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client5
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client7
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(LiDAR_node_SGD
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(LiDAR_node_SGD1
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client6
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client8
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client9
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(ground_truth_publisher
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client10
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client11
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client12
+#  ${catkin_LIBRARIES}
+# )
+# target_link_libraries(Lidar_node_client13
+#  ${catkin_LIBRARIES}
+# )
 #############
 ## Install ##
 #############
