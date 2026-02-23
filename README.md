@@ -53,7 +53,7 @@ Navigationを起動します。ファイルの場所はHOMEにしていますが
 ```
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
 ```
-初期位置が合わないので、AMCLではロボットの初期位置は(0,0),turtlebotは(2,-0.5)なので、AMCLの推定位置を移動させます。
+初期位置が合わないので、AMCLではロボットの初期位置は(0,0),turtlebotは(2,-0.5)なので、AMCLの推定位置を移動させます。※amcl.launchの初期位置を変更しても構いません．
 ```
 rostopic pub -1 /initialpose geometry_msgs/PoseWithCovarianceStamped "header:
   seq: 0
